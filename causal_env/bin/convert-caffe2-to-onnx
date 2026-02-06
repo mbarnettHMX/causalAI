@@ -1,8 +1,6 @@
-#!/Users/michaelbarnett/Documents/GitHub/causalAI/causal_env/bin/python
-# -*- coding: utf-8 -*-
-import re
+#!/Users/michaelbarnett/Documents/GitHub/causalAI/causal_env/bin/python3.12
 import sys
 from caffe2.python.onnx.bin.conversion import caffe2_to_onnx
 if __name__ == '__main__':
-    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
     sys.exit(caffe2_to_onnx())
